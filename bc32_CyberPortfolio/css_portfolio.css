@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0%;
+    /*  */
+}
+
+header {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+header .navbar-brand i {
+    color: #35a22c;
+    font-size: 2.5rem;
+    margin-right: 5px;
+}
+
+header .navbar-brand span {
+    font-size: 2rem;
+}
+
+header ul li {
+    margin: 0 10px;
+}
+
+header ul li.active a {
+    color: #35a22c !important;
+}
+
+header ul li a {
+    color: white !important;
+}
+
+header ul li::after {
+    content: "";
+    height: 2px;
+    display: block;
+    width: 0;
+    background-color: #35a22c;
+    transition: 0.5s;
+}
+
+header ul li.active::after {
+    width: 100%;
+}
+
+header ul li:hover::after {
+    width: 100%;
+}
+
+header ul li a:hover {
+    color: #35a22c !important;
+}
+
+/*  carousel */
+.carousel-item {
+    height: 100vh;
+    /* vh don vi do tuong doi */
+    background-position: center;
+    background-size: cover;
+}
+
+.carousel-item:nth-child(1) {
+    background-image: url(./img/image/finland.jpg);
+
+
+}
+
+.carousel-item:nth-child(2) {
+    background-image: url(./img/image/mountains.jpg);
+
+}
+
+.carousel-item:nth-child(3) {
+    background-image: url(./img/image/mountains-1.jpg);
+
+}
+.carousel-caption h3 {
+    font-size: 60px;
+}
+.carousel-caption p {
+    font-size: 25px;
+}
+.img_thumb {
+    width: 150px;
+    margin: auto;
+}
+
+.img_thumb img {
+    border-radius: 50%;
+}
+
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+/* project */
+#project .card {
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 5px #00000047;
+    overflow: hidden;
+    transition: all 0.5S;
+}
+
+#project .card:hover {
+    border: 1px solid #35a22c;
+}
+
+#project .card:hover h4 {
+    color: #35a22c;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.card-body h4 {
+    font-size: 1.2rem;
+    transition: 0.5s;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    background-color: #35a22c;
+}
+
+/* end project */
+/* service */
+#service {
+    background-image: url(./img/image/3.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 0;
+    position: relative;
+    
+}
+
+#service .card {
+    text-align: center;
+    padding: 1rem;
+    background-color: rgba(255,255,255,.1);
+    color: white;
+    border-radius: 10px;
+    backdrop-filter: blur(3px);
+    transition: all 0.5s;
+    /* backdrop-filter: blur làm nhòe màu nền */
+}
+.service__content .col-md-4:hover .card{
+    background-color: black !important;
+    border: 1px solid white ;
+}
+.card-body p {
+    padding: 20px 0;
+
+}
+#service .card i {
+    font-size: 48px;
+    color: #35a22c;
+    padding: 20px;
+}
+
+#service .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(39,43,54,.5);
+}
+#service .title {
+    position: relative;
+    /* z-index: 1;chỗ này ko cần dùng z-index vì nó nằm dưới overlay nên độ ưu tiên cao hơn */
+    margin-bottom: 60px;
+}
+/* end service */
+    /* education */
+ #education {
+        position: relative;
+        padding: 100px 0;
+    }
+#education .row_right {
+    padding-top: 70px;
+}
+#education .bg__edu {
+    background-image: url(./img/image/memphis_3.png);
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-position: bottom left;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    opacity: 0.5;
+}
+#education .card {
+    box-shadow: 0 0 30px 0 rgb(0 0 0 / 30%);
+    backdrop-filter: blur(3px);
+    background: rgba(255,255,255,0.25);
+}
+#education .card .card-body {
+    text-align: left;
+}
+#education .col-md-4 {
+    width: 500px;
+}       
+    /* footer */
+    footer {
+        background-color: #222;
+        padding: 50px 0;
+        color: #aaa;
+        text-align: center;
+    }
+    .footer_link {
+        padding-bottom: 30px;
+        border-bottom: 1px solid #454545;
+    }
+.footer_link a {
+    display: inline-block;
+    color: #aaa;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin-right: 10px;
+    border: 1px solid #454545;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+.footer_link a:hover {
+    color: #35a22c;
+    border: 1px solid #35a22c;
+}
+.footer_copy {
+    margin-top: 30px;
+}
+.footer_copy a {
+    transition: all 0.5s;
+    text-decoration: none;
+    color: #aaa;
+}
+.footer_copy p a:hover {
+    color: #35a22c;
+}
